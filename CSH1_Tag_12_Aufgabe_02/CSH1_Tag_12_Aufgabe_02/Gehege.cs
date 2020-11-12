@@ -24,7 +24,7 @@ public class Gehege
         foreach(Tier t in tiere)
         {
             Console.WriteLine("Name:\t" + t.Name);
-            Console.WriteLine("Art:\t" + t.Art);
+            Console.WriteLine("Art:\t" + t.Art.Bezeichnung);
             Console.WriteLine("--------------------------\n");
         }
     }
