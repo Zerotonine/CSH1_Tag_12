@@ -17,6 +17,7 @@ public class Rechnung
         this.rechnungsempfaenger = rechnungsempfaenger;
         this.rechnungsnummer = ++counter;
         alleRechnungen.Add(this);
+        this.rechnungsempfaenger.Rechnungen.Add(this);
     }
 
     private int rechnungsnummer;

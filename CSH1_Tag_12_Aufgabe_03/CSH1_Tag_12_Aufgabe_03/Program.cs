@@ -60,6 +60,7 @@ namespace CSH1_Tag_12_Aufgabe_03
 
         static void Fehlermeldung(string meldung)
         {
+            Console.CursorVisible = false;
             Console.Clear();
             Console.Beep();
             Headline("!!!Fehler!!!");
@@ -446,7 +447,7 @@ namespace CSH1_Tag_12_Aufgabe_03
                 {
                     return;
                 }
-                else if(eingabe < 0 || eingabe > Rechnung.AlleRechnungen.Count)
+                else if(!Rechnung.AlleRechnungen.FindAll(r => !r.Bezahlt).Any(r=> r.Rechnungsnummer == eingabe))
                 {
                     Fehlermeldung("Eingabe außerhalb des Gültigkeitsbereiches!");
                     continue;
